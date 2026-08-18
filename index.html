@@ -1,6 +1,1270 @@
-<h1> FIBRA OPTICA FTTH </h1>
-        <p>FTTH (por sus siglas en inglés, Fiber to the Home, o fibra hasta el hogar) es una tecnología de telecomunicaciones que lleva un cable de fibra óptica</p>
-<P> y directo desde la central de la compañía de internet hasta el interior de tu casa o negocio, sin usar cables de cobre </P>
-    </body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fibra Óptica FTTH | Tecnología y Conectividad</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b0f19;
+            color: #e8eaf6;
+            line-height: 1.7;
+        }
+
+        /* =========================
+           ENCABEZADO
+        ========================= */
+
+        header {
+            min-height: 430px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 50px 20px;
+
+            background:
+                radial-gradient(circle at top right, #7c3aed55, transparent 35%),
+                radial-gradient(circle at bottom left, #00e5ff33, transparent 35%),
+                #111827;
+        }
+
+        .hero {
+            max-width: 900px;
+        }
+
+        .hero .etiqueta {
+            display: inline-block;
+            background: #00e5ff;
+            color: #071018;
+            padding: 7px 18px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 58px;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .hero h1 span {
+            color: #00e5ff;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #b8c1d9;
+            max-width: 750px;
+            margin: auto;
+        }
+
+
+        /* =========================
+           MENU
+        ========================= */
+
+        nav {
+            background: #151b2b;
+            padding: 18px;
+            text-align: center;
+            border-bottom: 1px solid #29324a;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #cbd5e1;
+            margin: 0 13px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #00e5ff;
+        }
+
+
+        /* =========================
+           CONTENEDOR
+        ========================= */
+
+        .contenedor {
+            width: 90%;
+            max-width: 1150px;
+            margin: 70px auto;
+        }
+
+        section {
+            margin-bottom: 80px;
+        }
+
+        .titulo {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .titulo h2 {
+            color: white;
+            font-size: 34px;
+            margin-bottom: 8px;
+        }
+
+        .titulo h2 span {
+            color: #00e5ff;
+        }
+
+        .titulo p {
+            color: #8793ad;
+        }
+
+
+        /* =========================
+           INTRODUCCIÓN
+        ========================= */
+
+        .introduccion {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .bloque {
+            background: #151b2b;
+            border: 1px solid #29324a;
+            border-radius: 15px;
+            padding: 35px;
+        }
+
+        .bloque h3 {
+            color: #a78bfa;
+            font-size: 23px;
+            margin-bottom: 15px;
+        }
+
+        .bloque p {
+            color: #c4ccdc;
+        }
+
+        .dato {
+            margin-top: 20px;
+            padding: 15px;
+            border-left: 4px solid #00e5ff;
+            background: #0e1726;
+            color: #b9c5d9;
+        }
+
+
+        /* =========================
+           CARACTERÍSTICAS
+        ========================= */
+
+        .tarjetas {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .tarjeta {
+            background: #151b2b;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #29324a;
+            transition: 0.3s;
+        }
+
+        .tarjeta:hover {
+            transform: translateY(-7px);
+            border-color: #00e5ff;
+        }
+
+        .icono {
+            width: 55px;
+            height: 55px;
+            border-radius: 12px;
+            background: #241d3d;
+            color: #00e5ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .tarjeta h3 {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .tarjeta p {
+            color: #9da8bd;
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           FUNCIONAMIENTO
+        ========================= */
+
+        .flujo {
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .paso {
+            flex: 1;
+            background: #151b2b;
+            border: 1px solid #29324a;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .paso-numero {
+            width: 45px;
+            height: 45px;
+            background: #7c3aed;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .paso h3 {
+            color: #00e5ff;
+            margin-bottom: 10px;
+        }
+
+        .paso p {
+            color: #9da8bd;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           COMPONENTES
+        ========================= */
+
+        .componentes {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .componente {
+            background: #151b2b;
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 5px solid #7c3aed;
+        }
+
+        .componente h3 {
+            color: #a78bfa;
+            margin-bottom: 8px;
+        }
+
+        .componente p {
+            color: #aab4c8;
+        }
+
+
+        /* =========================
+           TABLA
+        ========================= */
+
+        .tabla-contenedor {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #151b2b;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        th {
+            background: #7c3aed;
+            color: white;
+            padding: 16px;
+            text-align: left;
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #29324a;
+            color: #b8c1d4;
+        }
+
+        tr:hover {
+            background: #1b2336;
+        }
+
+
+        /* =========================
+           VENTAJAS
+        ========================= */
+
+        .ventajas {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .ventaja {
+            background: linear-gradient(135deg, #171d30, #111827);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid #29324a;
+        }
+
+        .ventaja h3 {
+            color: #00e5ff;
+            margin-bottom: 8px;
+        }
+
+        .ventaja p {
+            color: #9da8bd;
+        }
+
+
+        /* =========================
+           INFORMACIÓN EXTRA
+        ========================= */
+
+        .informacion {
+            background:
+                linear-gradient(135deg, #21183b, #101b2c);
+            border: 1px solid #47357a;
+            padding: 40px;
+            border-radius: 18px;
+        }
+
+        .informacion h3 {
+            color: #00e5ff;
+            margin-bottom: 15px;
+            font-size: 25px;
+        }
+
+        .informacion p {
+            color: #c1c9da;
+            margin-bottom: 15px;
+        }
+
+        .informacion ul {
+            margin-left: 25px;
+            color: #b5bfd2;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #080b12;
+            border-top: 1px solid #29324a;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        footer h2 {
+            color: #00e5ff;
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            color: #667085;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .tarjetas {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .introduccion {
+                grid-template-columns: 1fr;
+            }
+
+            .componentes {
+                grid-template-columns: 1fr;
+            }
+
+            .ventajas {
+                grid-template-columns: 1fr;
+            }
+
+            .flujo {
+                flex-direction: column;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .tarjetas {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 7px;
+            }
+
+            .contenedor {
+                width: 94%;
+            }
+
+            .titulo h2 {
+                font-size: 28px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         ENCABEZADO
+    ========================= -->
+
+    <header>
+
+        <div class="hero">
+
+            <div class="etiqueta">
+                TECNOLOGÍA DE TELECOMUNICACIONES
+            </div>
+
+            <h1>
+                FIBRA ÓPTICA <span>FTTH</span>
+            </h1>
+
+            <p>
+                Conoce la tecnología Fiber To The Home, su funcionamiento,
+                componentes, características, ventajas y aplicaciones
+                en las redes modernas de comunicación.
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         MENÚ
+    ========================= -->
+
+    <nav>
+
+        <a href="#que-es">¿QUÉ ES?</a>
+        <a href="#caracteristicas">CARACTERÍSTICAS</a>
+        <a href="#funcionamiento">FUNCIONAMIENTO</a>
+        <a href="#componentes">COMPONENTES</a>
+        <a href="#ventajas">VENTAJAS</a>
+        <a href="#aplicaciones">APLICACIONES</a>
+
+    </nav>
+
+
+    <main class="contenedor">
+
+
+        <!-- =========================
+             ¿QUÉ ES?
+        ========================= -->
+
+        <section id="que-es">
+
+            <div class="titulo">
+                <h2>¿Qué es <span>FTTH</span>?</h2>
+                <p>Conceptos básicos de la fibra óptica hasta el hogar</p>
+            </div>
+
+
+            <div class="introduccion">
+
+                <div class="bloque">
+
+                    <h3>Definición</h3>
+
+                    <p>
+                        FTTH significa <strong>Fiber To The Home</strong>,
+                        que en español significa "Fibra hasta el Hogar".
+                        Es una arquitectura de red de telecomunicaciones
+                        en la que la fibra óptica llega directamente hasta
+                        las instalaciones del usuario.
+                    </p>
+
+                    <p style="margin-top:15px;">
+                        A diferencia de tecnologías que utilizan cables de
+                        cobre en parte del recorrido, FTTH utiliza fibra
+                        óptica como medio de transmisión hasta el punto
+                        donde se encuentra el cliente.
+                    </p>
+
+                </div>
+
+
+                <div class="bloque">
+
+                    <h3>¿Por qué es importante?</h3>
+
+                    <p>
+                        El crecimiento de los servicios digitales requiere
+                        redes capaces de transportar grandes cantidades
+                        de información.
+                    </p>
+
+                    <div class="dato">
+                        La fibra óptica permite transportar información
+                        mediante señales de luz a través de filamentos
+                        extremadamente delgados.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CARACTERÍSTICAS
+        ========================= -->
+
+        <section id="caracteristicas">
+
+            <div class="titulo">
+
+                <h2>Características de <span>FTTH</span></h2>
+
+                <p>
+                    Principales propiedades de esta tecnología
+                </p>
+
+            </div>
+
+
+            <div class="tarjetas">
+
+
+                <div class="tarjeta">
+
+                    <div class="icono">01</div>
+
+                    <h3>Alta capacidad</h3>
+
+                    <p>
+                        La fibra óptica tiene una gran capacidad para
+                        transportar grandes cantidades de información.
+                    </p>
+
+                </div>
+
+
+                <div class="tarjeta">
+
+                    <div class="icono">02</div>
+
+                    <h3>Baja latencia</h3>
+
+                    <p>
+                        Permite transmitir información rápidamente,
+                        característica importante para aplicaciones
+                        interactivas y servicios en tiempo real.
+                    </p>
+
+                </div>
+
+
+                <div class="tarjeta">
+
+                    <div class="icono">03</div>
+
+                    <h3>Estabilidad</h3>
+
+                    <p>
+                        Las redes de fibra óptica ofrecen una conexión
+                        estable y son poco sensibles a interferencias
+                        electromagnéticas.
+                    </p>
+
+                </div>
+
+
+                <div class="tarjeta">
+
+                    <div class="icono">04</div>
+
+                    <h3>Larga distancia</h3>
+
+                    <p>
+                        La fibra permite transportar señales a grandes
+                        distancias con pérdidas relativamente bajas.
+                    </p>
+
+                </div>
+
+
+                <div class="tarjeta">
+
+                    <div class="icono">05</div>
+
+                    <h3>Escalabilidad</h3>
+
+                    <p>
+                        La infraestructura de fibra puede adaptarse al
+                        crecimiento de las necesidades de conectividad.
+                    </p>
+
+                </div>
+
+
+                <div class="tarjeta">
+
+                    <div class="icono">06</div>
+
+                    <h3>Conectividad moderna</h3>
+
+                    <p>
+                        Es utilizada como infraestructura para servicios
+                        residenciales, empresariales y de telecomunicaciones.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FUNCIONAMIENTO
+        ========================= -->
+
+        <section id="funcionamiento">
+
+            <div class="titulo">
+
+                <h2>¿Cómo funciona <span>FTTH</span>?</h2>
+
+                <p>
+                    Recorrido básico de la señal desde el proveedor hasta el usuario
+                </p>
+
+            </div>
+
+
+            <div class="flujo">
+
+
+                <div class="paso">
+
+                    <div class="paso-numero">1</div>
+
+                    <h3>Central</h3>
+
+                    <p>
+                        El proveedor dispone de equipos de telecomunicaciones
+                        que generan y administran las señales ópticas.
+                    </p>
+
+                </div>
+
+
+                <div class="paso">
+
+                    <div class="paso-numero">2</div>
+
+                    <h3>OLT</h3>
+
+                    <p>
+                        La Optical Line Terminal administra las conexiones
+                        ópticas de los usuarios.
+                    </p>
+
+                </div>
+
+
+                <div class="paso">
+
+                    <div class="paso-numero">3</div>
+
+                    <h3>Splitter</h3>
+
+                    <p>
+                        Los splitters ópticos permiten distribuir una señal
+                        hacia diferentes usuarios.
+                    </p>
+
+                </div>
+
+
+                <div class="paso">
+
+                    <div class="paso-numero">4</div>
+
+                    <h3>Fibra</h3>
+
+                    <p>
+                        La información viaja por la fibra óptica mediante
+                        señales luminosas.
+                    </p>
+
+                </div>
+
+
+                <div class="paso">
+
+                    <div class="paso-numero">5</div>
+
+                    <h3>ONT</h3>
+
+                    <p>
+                        La ONT recibe la señal óptica en las instalaciones
+                        del usuario.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             COMPONENTES
+        ========================= -->
+
+        <section id="componentes">
+
+            <div class="titulo">
+
+                <h2>Componentes de una red <span>FTTH</span></h2>
+
+                <p>
+                    Equipos y elementos principales
+                </p>
+
+            </div>
+
+
+            <div class="componentes">
+
+
+                <div class="componente">
+
+                    <h3>OLT — Optical Line Terminal</h3>
+
+                    <p>
+                        Es un equipo que normalmente se encuentra en la
+                        central del operador. Gestiona las comunicaciones
+                        entre la red del proveedor y los usuarios.
+                    </p>
+
+                </div>
+
+
+                <div class="componente">
+
+                    <h3>ODF — Optical Distribution Frame</h3>
+
+                    <p>
+                        Permite organizar, proteger y administrar las
+                        conexiones de fibra óptica dentro de instalaciones
+                        de telecomunicaciones.
+                    </p>
+
+                </div>
+
+
+                <div class="componente">
+
+                    <h3>Splitter óptico</h3>
+
+                    <p>
+                        Es un dispositivo pasivo que divide una señal
+                        óptica para distribuirla a diferentes puntos
+                        de la red.
+                    </p>
+
+                </div>
+
+
+                <div class="componente">
+
+                    <h3>Cable de fibra óptica</h3>
+
+                    <p>
+                        Es el medio físico utilizado para transportar
+                        información mediante pulsos de luz.
+                    </p>
+
+                </div>
+
+
+                <div class="componente">
+
+                    <h3>ONT / ONU</h3>
+
+                    <p>
+                        Equipo instalado en el lado del usuario que
+                        recibe la señal óptica y proporciona interfaces
+                        para la red del cliente.
+                    </p>
+
+                </div>
+
+
+                <div class="componente">
+
+                    <h3>Router</h3>
+
+                    <p>
+                        Distribuye la conexión hacia diferentes dispositivos
+                        como computadoras, teléfonos, televisores y otros
+                        equipos.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             TIPOS DE FIBRA
+        ========================= -->
+
+        <section>
+
+            <div class="titulo">
+
+                <h2>Tipos de <span>fibra óptica</span></h2>
+
+                <p>
+                    Principales tipos utilizados en telecomunicaciones
+                </p>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table>
+
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Características</th>
+                        <th>Uso principal</th>
+                    </tr>
+
+                    <tr>
+                        <td>Monomodo</td>
+
+                        <td>
+                            Tiene un núcleo pequeño y permite transportar
+                            señales a grandes distancias.
+                        </td>
+
+                        <td>
+                            Telecomunicaciones y redes FTTH.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Multimodo</td>
+
+                        <td>
+                            Tiene un núcleo mayor y permite la propagación
+                            de múltiples modos de luz.
+                        </td>
+
+                        <td>
+                            Redes de distancias más cortas.
+                        </td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             VENTAJAS
+        ========================= -->
+
+        <section id="ventajas">
+
+            <div class="titulo">
+
+                <h2>Ventajas de <span>FTTH</span></h2>
+
+                <p>
+                    Beneficios de utilizar fibra óptica hasta el hogar
+                </p>
+
+            </div>
+
+
+            <div class="ventajas">
+
+
+                <div class="ventaja">
+
+                    <h3>✓ Mayor velocidad</h3>
+
+                    <p>
+                        Permite ofrecer conexiones de alta capacidad
+                        para las necesidades actuales de Internet.
+                    </p>
+
+                </div>
+
+
+                <div class="ventaja">
+
+                    <h3>✓ Menor interferencia</h3>
+
+                    <p>
+                        La fibra óptica es resistente a las interferencias
+                        electromagnéticas que pueden afectar a otros medios.
+                    </p>
+
+                </div>
+
+
+                <div class="ventaja">
+
+                    <h3>✓ Mayor capacidad</h3>
+
+                    <p>
+                        Puede transportar grandes cantidades de información
+                        utilizando señales ópticas.
+                    </p>
+
+                </div>
+
+
+                <div class="ventaja">
+
+                    <h3>✓ Baja latencia</h3>
+
+                    <p>
+                        Es adecuada para aplicaciones que requieren una
+                        respuesta rápida de la red.
+                    </p>
+
+                </div>
+
+
+                <div class="ventaja">
+
+                    <h3>✓ Conexión estable</h3>
+
+                    <p>
+                        La infraestructura de fibra proporciona una conexión
+                        estable para diferentes tipos de servicios.
+                    </p>
+
+                </div>
+
+
+                <div class="ventaja">
+
+                    <h3>✓ Preparada para el futuro</h3>
+
+                    <p>
+                        La infraestructura óptica permite responder al
+                        crecimiento continuo de la demanda de datos.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             APLICACIONES
+        ========================= -->
+
+        <section id="aplicaciones">
+
+            <div class="titulo">
+
+                <h2>Aplicaciones de la <span>fibra FTTH</span></h2>
+
+                <p>
+                    Servicios que pueden utilizar una conexión de fibra óptica
+                </p>
+
+            </div>
+
+
+            <div class="informacion">
+
+                <h3>Internet residencial</h3>
+
+                <p>
+                    FTTH es ampliamente utilizada para proporcionar acceso
+                    a Internet de alta capacidad en viviendas.
+                </p>
+
+
+                <h3>Teletrabajo</h3>
+
+                <p>
+                    Las conexiones de fibra permiten utilizar servicios
+                    de videoconferencia, almacenamiento en la nube y
+                    plataformas de trabajo remoto.
+                </p>
+
+
+                <h3>Entretenimiento digital</h3>
+
+                <p>
+                    Puede utilizarse para servicios de streaming,
+                    televisión por Internet y videojuegos en línea.
+                </p>
+
+
+                <h3>Educación</h3>
+
+                <p>
+                    Facilita el acceso a clases virtuales, plataformas
+                    educativas, videoconferencias y recursos digitales.
+                </p>
+
+
+                <h3>Servicios empresariales</h3>
+
+                <p>
+                    Las empresas pueden utilizar conexiones de fibra para
+                    servicios en la nube, comunicaciones, transferencia
+                    de información y acceso a sistemas remotos.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SEGURIDAD Y MANTENIMIENTO
+        ========================= -->
+
+        <section>
+
+            <div class="titulo">
+
+                <h2>Mantenimiento de una red <span>FTTH</span></h2>
+
+                <p>
+                    Aspectos importantes para conservar una instalación adecuada
+                </p>
+
+            </div>
+
+
+            <div class="tarjetas">
+
+
+                <div class="tarjeta">
+
+                    <div class="icono">A</div>
+
+                    <h3>Evitar dobleces</h3>
+
+                    <p>
+                        Los cables de fibra deben instalarse respetando
+                        los radios de curvatura recomendados.
+                    </p>
+
+                </div>
+
+
+                <div class="tarjeta">
+
+                    <div class="icono">B</div>
+
+                    <h3>Limpieza</h3>
+
+                    <p>
+                        Los conectores ópticos deben mantenerse limpios
+                        para evitar pérdidas de señal.
+                    </p>
+
+                </div>
+
+
+                <div class="tarjeta">
+
+                    <div class="icono">C</div>
+
+                    <h3>Protección</h3>
+
+                    <p>
+                        La fibra debe protegerse correctamente durante
+                        la instalación y manipulación.
+                    </p>
+
+                </div>
+
+
+                <div class="tarjeta">
+
+                    <div class="icono">D</div>
+
+                    <h3>Mediciones</h3>
+
+                    <p>
+                        Las pruebas ópticas permiten comprobar el estado
+                        y rendimiento de los enlaces.
+                    </p>
+
+                </div>
+
+
+                <div class="tarjeta">
+
+                    <div class="icono">E</div>
+
+                    <h3>Conectores</h3>
+
+                    <p>
+                        Los conectores deben instalarse correctamente
+                        para garantizar una transmisión adecuada.
+                    </p>
+
+                </div>
+
+
+                <div class="tarjeta">
+
+                    <div class="icono">F</div>
+
+                    <h3>Organización</h3>
+
+                    <p>
+                        Una instalación ordenada facilita el mantenimiento
+                        y localización de posibles problemas.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONCLUSIÓN
+        ========================= -->
+
+        <section>
+
+            <div class="informacion">
+
+                <h3>Conclusión</h3>
+
+                <p>
+                    La tecnología FTTH representa una de las principales
+                    soluciones utilizadas para proporcionar conectividad
+                    mediante fibra óptica directamente hasta el usuario.
+                </p>
+
+                <p>
+                    Su capacidad, estabilidad, baja latencia y posibilidad
+                    de transportar grandes cantidades de información hacen
+                    que la fibra óptica sea un elemento importante de las
+                    redes modernas de telecomunicaciones.
+                </p>
+
+                <p>
+                    Con el crecimiento de los servicios digitales,
+                    las videoconferencias, el almacenamiento en la nube,
+                    el entretenimiento en línea y otras aplicaciones,
+                    las redes de fibra óptica continúan teniendo un papel
+                    fundamental en la conectividad.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================
+         PIE DE PÁGINA
+    ========================= -->
+
+    <footer>
+
+        <h2>FIBRA ÓPTICA FTTH</h2>
+
+        <p>
+            Página informativa sobre Fiber To The Home
+        </p>
+
+        <p>
+            Tecnología • Conectividad • Telecomunicaciones
+        </p>
+
+    </footer>
+
+
+</body>
+</html>
 
    
